@@ -5,6 +5,8 @@ section.cta {
   padding: 250px 0;
   background-image: url("https://i.imgur.com/tIC28W0.jpg");
   background-position: center;
+  background-repeat: no-repeat;
+  background-position: center center;
   @include background-cover;
 
   .cta-content {
@@ -26,9 +28,7 @@ section.cta {
 
   &.signup-cta {
     padding: 100px 0;
-    height: 100vh;
     background-image: url("https://i.imgur.com/GR2RzQ1.jpg");
-
     @media (max-width: 1200px) {
       background-image: url("https://i.imgur.com/t46vrTa.jpg");
     }
@@ -38,10 +38,10 @@ section.cta {
 
       .form-control {
         color: white;
-        background-color: transparent;
+        background-color: #FFF5;
 
         &:focus {
-          background-color: transparent;
+          background-color: #FFF9;
         }
       }
 

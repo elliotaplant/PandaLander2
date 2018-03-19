@@ -294,6 +294,8 @@ section.cta {
   padding: 250px 0;
   background-image: url("https://i.imgur.com/tIC28W0.jpg");
   background-position: center;
+  background-repeat: no-repeat;
+  background-position: center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -320,7 +322,6 @@ section.cta .cta-content h2 {
 
 section.cta.signup-cta {
   padding: 100px 0;
-  height: 100vh;
   background-image: url("https://i.imgur.com/GR2RzQ1.jpg");
 }
 
@@ -336,11 +337,11 @@ section.cta.signup-cta #signup-form {
 
 section.cta.signup-cta #signup-form .form-control {
   color: white;
-  background-color: transparent;
+  background-color: #FFF5;
 }
 
 section.cta.signup-cta #signup-form .form-control:focus {
-  background-color: transparent;
+  background-color: #FFF9;
 }
 
 section.cta.signup-cta #signup-form .btn-outline {
