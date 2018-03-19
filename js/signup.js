@@ -77,10 +77,10 @@ console.log('serializedForm', serializedForm);
         $
           .post(signupForm.attr('action'), serializedForm)
           .then(function() {
-            window.location.pathname = 'stillbuilding.html'
+            window.location.pathname = 'thankyou.html'
           })
           .catch(function() {
-            window.location.pathname = 'stillbuilding.html'
+            window.location.pathname = 'thankyou.html'
           });
       }
     });
