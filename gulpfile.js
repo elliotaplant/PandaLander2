@@ -6,7 +6,7 @@ var rename = require("gulp-rename");
 var uglify = require('gulp-uglify');
 var browserSync = require('browser-sync').create();
 var replace = require('gulp-replace');
-var googleAnalytics = require('gulp-ga');
+var gaTag = require('./ga.js');
 
 var pkg = require('./package.json');
 var keys = {};
@@ -100,10 +100,7 @@ gulp.task('publish', ['default'], function() {
   // Add google analytics to published HTML
   gulp
     .src('./*.html')
-    .pipe(googleAnalytics({
-      url: 'pandaprint.co',
-      uid: process.env.GOOGLE_ANALYTICS_ID || keys.googleAnalyticsId,
-    }))
+    .pipe(replace('<!-- GOOGLE_ANALYTICS_SCRIPT -->', gaTag))
     .pipe(gulp.dest('dist'));
 
   gulp
