@@ -335,9 +335,8 @@ section.cta.signup-cta #signup-form {
   color: white;
 }
 
-section.cta.signup-cta #signup-form .hidden-letter {
-  color: transparent;
-  width: 1px;
+section.cta.signup-cta #signup-form #signup-btn.disabled {
+  cursor: not-allowed;
 }
 
 section.cta.signup-cta #signup-form .form-control {
@@ -361,19 +360,19 @@ section.cta.signup-cta .overlay {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6));
 }
 
-section.cta.stillbuilding-cta {
+section.cta.thankyou-cta {
   height: 100vh;
   background-image: url("https://i.imgur.com/Xw0a2L4.jpg");
   color: white;
 }
 
 @media (max-width: 1200px) {
-  section.cta.stillbuilding-cta {
+  section.cta.thankyou-cta {
     background-image: url("https://i.imgur.com/fyDt0mG.jpg");
   }
 }
 
-section.cta.stillbuilding-cta .overlay {
+section.cta.thankyou-cta .overlay {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8));
 }
 

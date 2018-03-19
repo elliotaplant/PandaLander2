@@ -100,7 +100,7 @@ gulp.task('publish', ['default'], function() {
   // Add google analytics to published HTML
   gulp
     .src('./*.html')
-    .pipe(ga({
+    .pipe(googleAnalytics({
       url: 'pandaprint.co',
       uid: process.env.GOOGLE_ANALYTICS_ID || keys.googleAnalyticsId,
     }))
