@@ -8,7 +8,12 @@ var browserSync = require('browser-sync').create();
 var replace = require('gulp-replace');
 
 var pkg = require('./package.json');
-var keys = require('./keys.json');
+var keys = {};
+try {
+  keys = require('./keys.json');
+} catch (e) {
+  console.log('No keys file found. Assuming keys are in process.ENV');
+}
 
 
 // Copy third party libraries from /node_modules into /vendor
