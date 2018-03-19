@@ -1,4 +1,5 @@
 {
   "stripePublishableKey": "STRIPE_PUBLISHABLE_API_KEY_GOES_HERE",
+  "stripeSecretKey": "STRIPE_SECRET_KEY_GOES_HERE",
   "googleAnalyticsId": "GOOGLE_ANALYTICS_ID_GOES_HERE"
 }
