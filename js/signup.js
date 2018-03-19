@@ -57,9 +57,12 @@ card.addEventListener('change', function(event) {
 
 // Create a token or display an error when the form is submitted.
 var signupForm = document.getElementById('signup-form');
-signupForm.addEventListener('submit', function(event) {
+// Also should try to get phone number from hash
+$('#signup-form').submit(function(event) {
   event.preventDefault();
-
+  var signupForm = $(this);
+  var serializedForm = signupForm.serialize();
+console.log('serializedForm', serializedForm);
   stripe
     .createToken(card)
     .then(function(result) {
@@ -69,34 +72,16 @@ signupForm.addEventListener('submit', function(event) {
         errorElement.textContent = result.error.message;
       } else {
         // Send the token to server.
-        stripeTokenHandler(result.token);
+        serializedForm += ('&stripe-token=' + result.token.id);
+        console.log('serializedForm 2', serializedForm);
+        $
+          .post(signupForm.attr('action'), serializedForm)
+          .then(function() {
+            window.location.pathname = 'stillbuilding.html'
+          })
+          .catch(function() {
+            window.location.pathname = 'stillbuilding.html'
+          });
       }
-    });
-});
-
-function stripeTokenHandler(token) {
-  // Insert the token ID into the form so it gets submitted to the server
-  var signupForm = document.getElementById('signup-form');
-  var hiddenInput = document.createElement('input');
-  hiddenInput.setAttribute('type', 'hidden');
-  hiddenInput.setAttribute('name', 'stripeToken');
-  hiddenInput.setAttribute('value', token.id);
-  signupForm.appendChild(hiddenInput);
-
-  // Submit the form
-  signupForm.submit();
-}
-// Also should try to get phone number from hash
-$('#signup-form').submit(function(event) {
-  event.preventDefault();
-  var signupForm = $(this);
-  console.log(signupForm.serialize());
-  $
-    .post(signupFormattr('action'), signupForm.serialize())
-    .then(function() {
-      window.location.pathname = 'stillbuilding.html'
-    })
-    .catch(function() {
-      window.location.pathname = 'stillbuilding.html'
     });
 });
