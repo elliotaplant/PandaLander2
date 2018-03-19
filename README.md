@@ -1,6 +1,9 @@
-# Panda Print Test Landing Page
+# Panda Print
+Print photos with text messages
 
-Just a landing page to test a landing page testing company. Find the live page at [verifire.co](https://pandaprint.co)
+## Test Landing Page
+
+A landing page to sign up for Panda Print. Find the live page at [www.pandaprint.co](https://pandaprint.co)
 
 ## Frequently Asked Questions
 
