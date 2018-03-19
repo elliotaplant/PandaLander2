@@ -12,7 +12,7 @@ var style = {
     fontFamily: 'Muli, Helvetica, Arial',
 
     ':-webkit-autofill': {
-      color: '#fce883'
+      color: '#000'
     },
     '::placeholder': {
       color: '#6c757d'
