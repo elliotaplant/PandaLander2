@@ -292,7 +292,7 @@ section.features .feature-item i {
 section.cta {
   position: relative;
   padding: 250px 0;
-  background-image: url("https://i.imgur.com/CGAMFhQ.jpg");
+  background-image: url("https://i.imgur.com/tIC28W0.jpg");
   background-position: center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -496,6 +496,10 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
 
 .ep-clearfix {
   margin-top: 2em;
+}
+
+hr {
+  margin-bottom: 15px;
 }
 
 .faq hr {
