@@ -9,14 +9,14 @@ body {
 }
 
 a {
-  color: #fdcc52;
+  color: #70C9FF;
   -webkit-transition: all .35s;
   -moz-transition: all .35s;
   transition: all .35s;
 }
 
 a:hover, a:focus {
-  color: #fcbd20;
+  color: #3db6ff;
 }
 
 hr {
@@ -67,14 +67,14 @@ section h2 {
 }
 
 #mainNav .navbar-brand {
-  color: #fdcc52;
+  color: #70C9FF;
   font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
   font-weight: 200;
   letter-spacing: 1px;
 }
 
 #mainNav .navbar-brand:hover, #mainNav .navbar-brand:focus {
-  color: #fcbd20;
+  color: #3db6ff;
 }
 
 #mainNav .navbar-toggler {
@@ -92,7 +92,7 @@ section h2 {
 }
 
 #mainNav .navbar-nav > li > a.active {
-  color: #fdcc52 !important;
+  color: #70C9FF !important;
   background-color: transparent;
 }
 
@@ -107,7 +107,7 @@ section h2 {
 
 #mainNav .navbar-nav > li > a:hover,
 #mainNav .navbar-nav > li > a:focus:hover {
-  color: #fdcc52;
+  color: #70C9FF;
 }
 
 @media (min-width: 992px) {
@@ -137,7 +137,7 @@ section h2 {
     color: #222222;
   }
   #mainNav.navbar-shrink .navbar-brand:hover, #mainNav.navbar-shrink .navbar-brand:focus {
-    color: #fdcc52;
+    color: #70C9FF;
   }
   #mainNav.navbar-shrink .navbar-nav > li > a,
   #mainNav.navbar-shrink .navbar-nav > li > a:focus {
@@ -145,7 +145,7 @@ section h2 {
   }
   #mainNav.navbar-shrink .navbar-nav > li > a:hover,
   #mainNav.navbar-shrink .navbar-nav > li > a:focus:hover {
-    color: #fdcc52;
+    color: #70C9FF;
   }
 }
 
@@ -155,10 +155,10 @@ header.masthead {
   padding-top: 150px;
   padding-bottom: 100px;
   color: white;
-  background: url("../img/bg-pattern.png"), #7b4397;
-  background: url("../img/bg-pattern.png"), -webkit-linear-gradient(to left, #7b4397, #DE1A1A);
-  background: url("../img/bg-pattern.png"), linear-gradient(to left, #7b4397, #DE1A1A);
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url("https://i.imgur.com/TBsZ2kO.jpg");
+  background: url("../img/bg-pattern.png"), #5BC236;
+  background: url("../img/bg-pattern.png"), -webkit-linear-gradient(to left, #5BC236, #FDEE00);
+  background: url("../img/bg-pattern.png"), linear-gradient(to left, #5BC236, #FDEE00);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), url("https://i.imgur.com/2vFOqlj.jpg");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -283,8 +283,8 @@ section.features .feature-item i {
   font-size: 80px;
   display: block;
   margin-bottom: 15px;
-  background: -webkit-linear-gradient(to left, #7b4397, #DE1A1A);
-  background: linear-gradient(to left, #7b4397, #DE1A1A);
+  background: -webkit-linear-gradient(to left, #5BC236, #FDEE00);
+  background: linear-gradient(to left, #5BC236, #FDEE00);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -342,7 +342,7 @@ section.cta.signup-cta #signup-form .btn-outline {
 }
 
 section.cta.signup-cta #signup-form .btn-outline:hover {
-  background-color: #fdcc52;
+  background-color: #70C9FF;
 }
 
 section.cta.signup-cta .overlay {
@@ -383,8 +383,8 @@ section.contact h2 i {
 
 section.contact .price {
   font-size: 100px;
-  color: #7b4397;
-  background: -webkit-linear-gradient(#7b4397, #DE1A1A);
+  color: #5BC236;
+  background: -webkit-linear-gradient(#5BC236, #FDEE00);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   border-bottom: 1px solid rgba(34, 34, 34, 0.3);
@@ -456,13 +456,13 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
 }
 
 .bg-primary {
-  background: #fdcc52;
-  background: -webkit-linear-gradient(#fdcc52, #fdc539);
-  background: linear-gradient(#fdcc52, #fdc539);
+  background: #70C9FF;
+  background: -webkit-linear-gradient(#70C9FF, #57bfff);
+  background: linear-gradient(#70C9FF, #57bfff);
 }
 
 .text-primary {
-  color: #fdcc52;
+  color: #70C9FF;
 }
 
 .no-gutter > [class*='col-'] {
@@ -478,8 +478,8 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
 
 .btn-outline:hover, .btn-outline:focus, .btn-outline:active, .btn-outline.active {
   color: white;
-  border-color: #fdcc52;
-  background-color: #fdcc52;
+  border-color: #70C9FF;
+  background-color: #70C9FF;
 }
 
 .btn {
