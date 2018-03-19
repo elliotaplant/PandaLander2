@@ -27,7 +27,11 @@ section.cta {
   &.signup-cta {
     padding: 100px 0;
     height: 100vh;
-    background-image: url("https://i.imgur.com/QNHbLJV.jpg");
+    background-image: url("https://i.imgur.com/GR2RzQ1.jpg");
+
+    @media (max-width: 1200px) {
+      background-image: url("https://i.imgur.com/t46vrTa.jpg");
+    }
 
     #signup-form {
       color: white;
@@ -51,7 +55,7 @@ section.cta {
     }
 
     .overlay {
-      background: linear-gradient(to bottom, fade-out(black, .1), fade-out(black, .3));
+      background: linear-gradient(to bottom, fade-out(black, .2), fade-out(black, .4));
     }
   }
 

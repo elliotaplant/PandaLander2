@@ -11,7 +11,7 @@
   <meta name="author"
         content="">
 
-  <title>VeriFire - Battle Test Your Idea</title>
+  <title>Panda Print - Sign Up</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css"
@@ -47,9 +47,9 @@
   <link rel="manifest"
         href="/site.webmanifest">
   <meta name="msapplication-TileColor"
-        content="#da532c">
+        content="#39add1">
   <meta name="theme-color"
-        content="#000000">
+        content="#39add1">
 
 </head>
 
@@ -58,9 +58,11 @@
   <section class="cta signup-cta">
     <div class="cta-content">
       <div class="container">
-        <h2>Welcome to VeriFire,<br>it's nice to meet you.</h2>
+        <h2>Welcome to Panda Print!</h2>
+        <h4 class="text-light">Sign up for free and start printing today</h4>
+        <br>
         <form id="signup-form"
-              name="plan-signup"
+              name="signup"
               method="POST"
               netlify>
 
@@ -83,16 +85,16 @@
           </div>
           <div class="form-row">
             <div class="form-group col-sm-6">
+              <label for="phone">Phone</label>
+              <input type="phone"
+                     name="phone"
+                     class="form-control">
+            </div>
+            <div class="form-group col-sm-6">
               <label for="email">Email</label>
               <input required
                      type="email"
                      name="email"
-                     class="form-control">
-            </div>
-            <div class="form-group col-sm-6">
-              <label for="business-name">Business Name (optional)</label>
-              <input type="text"
-                     name="business-name"
                      class="form-control">
             </div>
           </div>
@@ -124,8 +126,13 @@
 
   <script type="text/javascript">
   try {
-    $('#plan-input').val(location.hash.substr(1));
-  } catch(e) {
+    var phone = location.hash.substr(1);
+    if (phone) {
+      var phoneInput = $('#phone-input');
+      phoneInput.val(phone);
+      phoneInput.prop('readonly', true);
+    }
+  } catch (e) {
     console.error('unable to detect plan name');
   }
 
