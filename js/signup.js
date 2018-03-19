@@ -5,10 +5,24 @@ var elements = stripe.elements();
 // Custom styling can be passed to options when creating an Element.
 var style = {
   base: {
-    // Add your base input styles here. For example:
-    fontSize: '16px',
-    color: '#32325d',
-  }
+    iconColor: '#70C9FF',
+    color: '#fff',
+    fontWeight: 500,
+    fontFamily: 'Roboto, Open Sans, Segoe UI, sans-serif',
+    fontSize: '15px',
+    fontSmoothing: 'antialiased',
+
+    ':-webkit-autofill': {
+      color: '#fce883',
+    },
+    '::placeholder': {
+      color: '#DDD',
+    },
+  },
+  invalid: {
+    iconColor: '#FFC7EE',
+    color: '#FFC7EE',
+  },
 };
 
 // Create an instance of the card Element.
@@ -22,14 +36,16 @@ card.addEventListener('change', function(event) {
   var displayError = document.getElementById('card-errors');
   if (event.error) {
     displayError.textContent = event.error.message;
+    displayError.classList.remove('hidden');
   } else {
-    displayError.textContent = '';
+    displayError.textContent = 'No Card Errors';
+    displayError.classList.add('hidden');
   }
 });
 
 // Create a token or display an error when the form is submitted.
-var form = document.getElementById('payment-form'); // TODO: Change this to pick up the form
-form.addEventListener('submit', function(event) {
+var signupForm = document.getElementById('signup-form');
+signupForm.addEventListener('submit', function(event) {
   event.preventDefault();
 
   stripe.createToken(card).then(function(result) {
@@ -46,13 +62,14 @@ form.addEventListener('submit', function(event) {
 
 function stripeTokenHandler(token) {
   // Insert the token ID into the form so it gets submitted to the server
-  var form = document.getElementById('payment-form');
+  var signupForm = document.getElementById('signup-form');
   var hiddenInput = document.createElement('input');
   hiddenInput.setAttribute('type', 'hidden');
   hiddenInput.setAttribute('name', 'stripeToken');
   hiddenInput.setAttribute('value', token.id);
-  form.appendChild(hiddenInput);
+  signupForm.appendChild(hiddenInput);
 
   // Submit the form
-  form.submit();
+  signupForm.submit();
 }
+// Also should try to get phone number from hash

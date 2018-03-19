@@ -194,13 +194,16 @@
           </div>
           <div class="form-row">
             <label for="card-element">Credit or debit card</label>
-            <div id="card-element">
+            <div id="card-element"
+                 class="form-control">
               <!-- A Stripe Element will be inserted here. -->
             </div>
 
             <!-- Used to display Element errors. -->
             <div id="card-errors"
+                 class="hidden"
                  role="alert">
+              No Card errors
             </div>
           </div>
           <div class="ep-clearfix text-center">
@@ -223,19 +226,24 @@
   <!-- Signup page handler -->
   <script src="js/signup.min.js"></script>
 
-  <script type="text/javascript">
-  try {
-    var phone = location.hash.substr(1);
-    if (phone) {
-      var phoneInput = $('#phone-input');
-      phoneInput.val(phone);
-      phoneInput.prop('readonly', true);
-    }
-  } catch (e) {
-    console.error('unable to detect plan name');
+  <style media="screen">
+  .StripeElement--invalid {
+    border-color: #fa755a;
   }
 
-  </script>
+  .StripeElement--webkit-autofill {
+    background-color: #fefde5 !important;
+  }
+
+  #card-errors {
+    color: #fa755a;
+  }
+
+  .hidden {
+    visibility: hidden;
+  }
+
+  </style>
 
 </body>
 
