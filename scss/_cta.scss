@@ -36,12 +36,17 @@ section.cta {
     #signup-form {
       color: white;
 
+      .hidden-letter {
+        color: transparent;
+        width: 1px;
+      }
+
       .form-control {
-        color: white;
-        background-color: #FFF5;
+        color: black;
+        background-color: #FFFC;
 
         &:focus {
-          background-color: #FFF9;
+          background-color: #FFF;
         }
       }
 

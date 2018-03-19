@@ -71,6 +71,7 @@
             <div class="form-group col-sm-6">
               <label for="first-name">First Name</label>
               <input required
+                     placeholder="Petey"
                      type="text"
                      name="first-name"
                      class="form-control">
@@ -78,6 +79,7 @@
             <div class="form-group col-sm-6">
               <label for="last-name">Last Name</label>
               <input required
+                     placeholder="Panda"
                      type="text"
                      name="last-name"
                      class="form-control">
@@ -87,12 +89,14 @@
             <div class="form-group col-sm-6">
               <label for="phone">Phone</label>
               <input type="phone"
+                     placeholder="(415) 867-5309"
                      name="phone"
                      class="form-control">
             </div>
             <div class="form-group col-sm-6">
               <label for="email">Email</label>
               <input required
+                     placeholder="petey.panda@gmail.com"
                      type="email"
                      name="email"
                      class="form-control">
@@ -104,6 +108,7 @@
             <div class="form-group col-sm-12">
               <label for="street-address-1">Street Address</label>
               <input required
+                     placeholder="123 Bamboo Blvd."
                      type="text"
                      name="street-address-1"
                      class="form-control">
@@ -113,6 +118,7 @@
             <div class="form-group col-sm-12">
               <label for="street-address-2">Address Line 2</label>
               <input type="text"
+                     placeholder="Unit P"
                      name="street-address-2"
                      class="form-control">
             </div>
@@ -121,6 +127,7 @@
             <div class="form-group col-md-5 col-sm-12">
               <label for="city">City</label>
               <input required
+                     placeholder="San Francisco"
                      type="text"
                      name="city"
                      class="form-control">
@@ -128,6 +135,7 @@
             <div class="form-group col-md-4 col-sm-6">
               <label for="state">State</label>
               <select required
+                      placeholder="California"
                       name="state"
                       class="form-control">
                           <option label=" "></option>
@@ -187,23 +195,27 @@
             <div class="form-group col-md-3 col-sm-6">
               <label for="zip-code">Zip Code</label>
               <input required
+                     placeholder="90210"
                      type="text"
                      name="zip-code"
                      class="form-control">
             </div>
           </div>
           <div class="form-row">
-            <label for="card-element">Credit or debit card</label>
-            <div id="card-element"
-                 class="form-control">
-              <!-- A Stripe Element will be inserted here. -->
-            </div>
+            <div class="form-group col-sm-12">
+              <label for="card-element">Credit or debit card</label>
+              <div id="card-element"
+                   class="form-control">
+                <div class="hidden-letter">Spooooky</div>
+                <!-- A Stripe Element will be inserted here. -->
+              </div>
 
-            <!-- Used to display Element errors. -->
-            <div id="card-errors"
-                 class="hidden"
-                 role="alert">
-              No Card errors
+              <!-- Used to display Element errors. -->
+              <div id="card-errors"
+                   class="hidden"
+                   role="alert">
+                No Card errors
+              </div>
             </div>
           </div>
           <div class="ep-clearfix text-center">
@@ -227,8 +239,20 @@
   <script src="js/signup.min.js"></script>
 
   <style media="screen">
+  .StripeElement {
+    background-color: #FFFC !important;
+  }
+
   .StripeElement--invalid {
     border-color: #fa755a;
+  }
+
+  .StripeElement.focus {
+    background-color: #FFF !important;
+  }
+
+  .StripeElement.focus::placeholder {
+    color: #FFF !important;
   }
 
   .StripeElement--webkit-autofill {

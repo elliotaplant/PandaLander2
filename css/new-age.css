@@ -335,13 +335,18 @@ section.cta.signup-cta #signup-form {
   color: white;
 }
 
+section.cta.signup-cta #signup-form .hidden-letter {
+  color: transparent;
+  width: 1px;
+}
+
 section.cta.signup-cta #signup-form .form-control {
-  color: white;
-  background-color: #FFF5;
+  color: black;
+  background-color: #FFFC;
 }
 
 section.cta.signup-cta #signup-form .form-control:focus {
-  background-color: #FFF9;
+  background-color: #FFF;
 }
 
 section.cta.signup-cta #signup-form .btn-outline {
