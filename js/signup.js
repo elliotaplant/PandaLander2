@@ -55,14 +55,23 @@ card.addEventListener('change', function(event) {
   }
 });
 
+var submitBtn = $('#submit-btn');
 // Create a token or display an error when the form is submitted.
 var signupForm = document.getElementById('signup-form');
 // Also should try to get phone number from hash
 $('#signup-form').submit(function(event) {
   event.preventDefault();
+
+  // Show form is submitting by changing button
+  submitBtn.prop('disabled', true);
+  submitBtn.addClass('disabled');
+  submitBtn.removeClass('btn-outline');
+
   var signupForm = $(this);
   var serializedForm = signupForm.serialize();
-console.log('serializedForm', serializedForm);
+
+
+  // Create the token with stripe
   stripe
     .createToken(card)
     .then(function(result) {
@@ -71,9 +80,9 @@ console.log('serializedForm', serializedForm);
         var errorElement = document.getElementById('card-errors');
         errorElement.textContent = result.error.message;
       } else {
-        // Send the token to server.
+        // Add the token to the form;
         serializedForm += ('&stripe-token=' + result.token.id);
-        console.log('serializedForm 2', serializedForm);
+        // Send the form with the token to the server
         $
           .post(signupForm.attr('action'), serializedForm)
           .then(function() {

@@ -37,9 +37,8 @@ section.cta {
     #signup-form {
       color: white;
 
-      .hidden-letter {
-        color: transparent;
-        width: 1px;
+      #signup-btn.disabled {
+        cursor: not-allowed;
       }
 
       .form-control {
