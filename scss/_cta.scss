@@ -29,6 +29,7 @@ section.cta {
   &.signup-cta {
     padding: 100px 0;
     background-image: url("https://i.imgur.com/GR2RzQ1.jpg");
+    // Smaller background
     @media (max-width: 1200px) {
       background-image: url("https://i.imgur.com/t46vrTa.jpg");
     }
@@ -66,7 +67,11 @@ section.cta {
 
   &.stillbuilding-cta {
     height: 100vh;
-    background-image: url("https://i.imgur.com/Zcao1jo.jpg");
+    background-image: url("https://i.imgur.com/Xw0a2L4.jpg");
+    // Smaller background
+    @media (max-width: 1200px) {
+      background-image: url("https://i.imgur.com/fyDt0mG.jpg");
+    }
     color: white;
 
     .overlay {

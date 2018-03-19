@@ -363,8 +363,14 @@ section.cta.signup-cta .overlay {
 
 section.cta.stillbuilding-cta {
   height: 100vh;
-  background-image: url("https://i.imgur.com/Zcao1jo.jpg");
+  background-image: url("https://i.imgur.com/Xw0a2L4.jpg");
   color: white;
+}
+
+@media (max-width: 1200px) {
+  section.cta.stillbuilding-cta {
+    background-image: url("https://i.imgur.com/fyDt0mG.jpg");
+  }
 }
 
 section.cta.stillbuilding-cta .overlay {
