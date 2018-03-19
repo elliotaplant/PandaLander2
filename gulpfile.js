@@ -4,8 +4,12 @@ var header = require('gulp-header');
 var cleanCSS = require('gulp-clean-css');
 var rename = require("gulp-rename");
 var uglify = require('gulp-uglify');
-var pkg = require('./package.json');
 var browserSync = require('browser-sync').create();
+var replace = require('gulp-replace');
+
+var pkg = require('./package.json');
+var keys = require('./keys.json');
+
 
 // Copy third party libraries from /node_modules into /vendor
 gulp.task('vendor', function() {
@@ -72,8 +76,10 @@ gulp.task('css', ['css:compile', 'css:minify',]);
 
 // Minify JavaScript
 gulp.task('js:minify', function() {
+  var stripeKey = process.env.STRIPE_PUBLISHABLE_API_KEY || keys.stripePublishableKey;
   return gulp
     .src(['./js/*.js', '!./js/*.min.js',])
+    .pipe(replace('STRIPE_PUBLISHABLE_API_KEY', stripeKey))
     .pipe(uglify())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('./js'))
