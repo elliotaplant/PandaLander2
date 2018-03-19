@@ -6,6 +6,7 @@ var rename = require("gulp-rename");
 var uglify = require('gulp-uglify');
 var browserSync = require('browser-sync').create();
 var replace = require('gulp-replace');
+var googleAnalytics = require('gulp-ga');
 
 var pkg = require('./package.json');
 var keys = {};
@@ -14,7 +15,6 @@ try {
 } catch (e) {
   console.log('No keys file found. Assuming keys are in process.ENV');
 }
-
 
 // Copy third party libraries from /node_modules into /vendor
 gulp.task('vendor', function() {
@@ -94,7 +94,16 @@ gulp.task('js:minify', function() {
 // Minify JavaScript
 gulp.task('publish', ['default'], function() {
   gulp
-    .src(['./*.html', './favicon/*'])
+    .src('./favicon/*')
+    .pipe(gulp.dest('dist'));
+
+  // Add google analytics to published HTML
+  gulp
+    .src('./*.html')
+    .pipe(ga({
+      url: 'pandaprint.co',
+      uid: process.env.GOOGLE_ANALYTICS_ID || keys.googleAnalyticsId,
+    }))
     .pipe(gulp.dest('dist'));
 
   gulp
