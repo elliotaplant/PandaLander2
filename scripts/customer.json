@@ -1,7 +1,0 @@
-{
-  "signupOutput": "email output goes here",
-  "email": "alfearon@gmail.com",
-  "stripeToken": "toke a loke",
-  "chargeAmount": "some number of CENTS",
-  "stripeCustomerId": "stripe customer id goes here"
-}
