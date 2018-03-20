@@ -4,4 +4,4 @@ var utils = {
   }
 }
 
-exports = utils;
+module.exports = utils;
