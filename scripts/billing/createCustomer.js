@@ -8,8 +8,7 @@ if (customer.email && customer.stripeToken) {
     .customers
     .create({email: customer.email, source: customer.stripeToken})
     .then(customerResponse => {
-      console.log('Created customer');
-      console.log(JSON.stringify(customerResponse));
+      console.log(customerResponse.id);
     })
     .catch(error => {
       console.error('Failed to create customer');
