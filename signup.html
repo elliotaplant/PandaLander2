@@ -64,7 +64,7 @@
         <h4 class="text-light">Sign up for free and start printing today</h4>
         <br>
         <form id="signup-form"
-              name="signup-with-tok-3"
+              name="signup-with-tok-promo"
               method="POST"
               action="submitForm"
               netlify>
@@ -205,11 +205,10 @@
             </div>
           </div>
           <div class="form-row">
-            <div class="form-group col-sm-12">
+            <div class="form-group col-sm-12 col-md-8">
               <label for="card-element">Credit or debit card</label>
               <div id="card-element"
                    class="form-control">
-                <div class="hidden-letter">Spooooky</div>
                 <!-- A Stripe Element will be inserted here. -->
               </div>
 
@@ -219,6 +218,12 @@
                    role="alert">
                 No Card errors
               </div>
+            </div>
+            <div class="form-group col-sm-12 col-md-4">
+              <label for="card-element">Promo Code</label>
+              <input type="text"
+                     name="promo-code"
+                     class="form-control">
             </div>
           </div>
           <input type="text"
