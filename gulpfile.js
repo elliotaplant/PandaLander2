@@ -6,7 +6,7 @@ var rename = require("gulp-rename");
 var uglify = require('gulp-uglify');
 var browserSync = require('browser-sync').create();
 var replace = require('gulp-replace');
-var gaTag = require('./ga.js');
+var googleScripts = require('./ga.js');
 
 var pkg = require('./package.json');
 var keys = {};
@@ -100,7 +100,9 @@ gulp.task('publish', ['default'], function() {
   // Add google analytics to published HTML
   gulp
     .src('./*.html')
-    .pipe(replace('<!-- GOOGLE_ANALYTICS_SCRIPT -->', gaTag))
+    .pipe(replace('<!-- GOOGLE_ANALYTICS_SCRIPT -->', googleScripts.gaTag))
+    .pipe(replace('<!-- GOOGLE_TAGS_HEAD -->', googleScripts.tagManagerHead))
+    .pipe(replace('<!-- GOOGLE_TAGS_BODY -->', googleScripts.tagManagerBody))
     .pipe(gulp.dest('dist'));
 
   gulp
