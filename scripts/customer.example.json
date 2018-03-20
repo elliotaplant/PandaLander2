@@ -1,7 +1,7 @@
 {
-  "signupOutput": "email output goes here",
-  "email": "customeremail@gmail.com",
-  "stripeToken": "stripe token goes here",
-  "chargeAmount": "some number of CENTS",
-  "stripeCustomerId": "stripe customer id goes here",
+  "signupOutput": "emailOutputGoesHere",
+  "email": "customerEmail",
+  "stripeToken": "stripeTokenGoesHere",
+  "chargeAmount": "someNumberOfCENTS",
+  "stripeCustomerId": "stripeCustomerIdGoesHere"
 }

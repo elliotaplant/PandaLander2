@@ -1,16 +1,12 @@
 const utils = require('../utils.js');
 const keys = utils.getKeys();
-
+const customer = require('../customer.json');
 var stripe = require('stripe')(keys.stripeSecretKey);
 
-const email = ''; // REPLACE WITH EMAIL OF NEW CUSTOMER
-const stripeToken = ''; // REPLACE WITH STRIPE TOKEN OF NEW CUSTOMER
-
-if (email && stripeToken) {
-
+if (customer.email && customer.stripeToken) {
   stripe
     .customers
-    .create({email, source: stripeToken,})
+    .create({email: customer.email, source: customer.stripeToken})
     .then(customerResponse => {
       console.log('Created customer');
       console.log(JSON.stringify(customerResponse));
