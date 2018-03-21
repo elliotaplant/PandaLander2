@@ -68,13 +68,18 @@ gulp.task('css:compile', function() {
 
 // Minify CSS
 gulp.task('css:minify', ['css:compile'], function() {
-  return gulp
-    .src(
-      ['./css/*.css', '!./css/*.min.css', './device-mockups/*.css', '!./device-mockups/*.min.css',]
-    )
+  gulp
+    .src(['./css/*.css', '!./css/*.min.css',])
     .pipe(cleanCSS())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('./css'))
+    .pipe(browserSync.stream());
+
+  return gulp
+    .src(['./device-mockups/device-mockups.css'])
+    .pipe(cleanCSS())
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest('./device-mockups'))
     .pipe(browserSync.stream());
 });
 
@@ -116,7 +121,7 @@ gulp.task('publish', ['default'], function() {
     .pipe(gulp.dest('dist/css'));
 
   gulp
-    .src(['./device-mockups/**/*', '!./device-mockups/device-mockups.css'])
+    .src(['./device-mockups/**/*', '!./device-mockups/device-mockups.css',])
     .pipe(gulp.dest('dist/device-mockups'));
 
   gulp
