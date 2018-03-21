@@ -1,16 +1,13 @@
 const utils = require('../utils.js');
 const keys = utils.getKeys();
-
+const customer = require('../customer.json');
 var stripe = require('stripe')(keys.stripeSecretKey);
 
-const amount = ''; // REPLACE WITH AMOUNT OF CHARGE
-const stripeCustomerId = ''; // REPLACE WITH STRIPE CUSTOMER ID OF CUSTOMER
-
-if (email && stripeToken) {
+if (customer.chargeAmount && customer.stripeCustomerId) {
 
   stripe
     .charges
-    .create({amount, currency: 'usd', customer: stripeCustomerId})
+    .create({amount: customer.chargeAmount, currency: 'usd', customer: customer.stripeCustomerId,})
     .then(chargeResponse => {
       console.log('Charged customer');
       console.log(JSON.stringify(chargeResponse));
