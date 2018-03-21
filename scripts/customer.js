@@ -10,16 +10,7 @@ function replaceAll(string, pattern, fix) {
 }
 
 // REPLACE WITH EMAIL OUTPUT
-const customer = `First Name: Petey
-Last Name: Panda
-Phone: 2813308004
-Email: peteypanda@gmail.com
-Street Address 1: 123 Bamboo Blvd.
-Street Address 2: Unit P
-City: San Francisco
-State: CA
-Zip Code: 90210
-Stripe Token: TOKE IT UP`
+const customer = ``;
 
 const wrapped = `{"${customer}"}`
 
