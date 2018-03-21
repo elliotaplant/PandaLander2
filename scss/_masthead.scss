@@ -9,7 +9,7 @@ header.masthead {
   background: url('../img/bg-pattern.png'), $theme-secondary;
   background: url('../img/bg-pattern.png'), -webkit-linear-gradient(to left, $theme-secondary, $theme-tertiary);
   background: url('../img/bg-pattern.png'), linear-gradient(to left, $theme-secondary, $theme-tertiary);
-  background: linear-gradient(to right, transparentize(black, 0.2), transparentize(black, 0.6)), url('https://i.imgur.com/2vFOqlj.jpg');
+  background: linear-gradient(to right, transparentize(black, 0.1), transparentize(black, 0.3)), url('https://i.imgur.com/2vFOqlj.jpg');
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
