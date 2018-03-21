@@ -29,6 +29,7 @@ const row = [
   'City',
   'State',
   'Zip Code',
+  'Promo Code',
 ].map(key => asObject[key])
 .join('\t');
 
