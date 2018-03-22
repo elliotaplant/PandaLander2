@@ -77,7 +77,8 @@ function submitPwintyOrder(orderId) {
   });
 }
 
-// createOrder(address)   .then(createdOrder => orderId = createdOrder.id)   .then(() =>
-// addPhotosToOrder(orderId, photos))
-
-submitPwintyOrder('1240542').catch(e => console.error(e))
+createOrder(address)
+  .then(createdOrder => orderId = createdOrder.id)
+  .then(() => addPhotosToOrder(orderId, photos))
+  .then(() => submitPwintyOrder(orderId))
+  .catch(e => console.error(e))
